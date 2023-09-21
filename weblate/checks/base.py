@@ -95,9 +95,8 @@ class Check:
 
     def check_target_unit(self, sources, targets, unit):
         """Check single unit, handling plurals."""
-        source = unit.source_string
         # Check singular
-        if self.check_single(source, targets[0], unit):
+        if self.check_single(sources[0], targets[0], unit):
             return True
         # Do we have more to check?
         if len(sources) > 1:
